@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="717.0" prefWidth="1026.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarymanage.FXMLDocumentController">
+  <tabs>
+    <Tab text="Quản lí mượn sách">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+      <Tab text="Quản lí trả sách">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </Tab>
+    <Tab text="Tác giả">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tableAuthor" layoutX="64.0" layoutY="290.0" prefHeight="363.0" prefWidth="911.0" />
+                  <GridPane layoutX="14.0" layoutY="14.0" prefHeight="242.0" prefWidth="671.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Bút danh:" />
+                        <Label text="Họ tên:" GridPane.rowIndex="1" />
+                        <Label text="Năm sinh:" GridPane.rowIndex="2" />
+                        <Label text="Giới tính:" GridPane.rowIndex="3" />
+                        <Label text="Thành phố:" GridPane.rowIndex="4" />
+                        <Label text="Quốc gia:" GridPane.rowIndex="5" />
+                        <Label text="Tiểu sử:" GridPane.rowIndex="6" />
+                        <Label text="Mô  tả:" GridPane.rowIndex="7" />
+                        <TextField fx:id="nicknameAuthor" GridPane.columnIndex="1" />
+                        <TextField fx:id="nameAuthor" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="birthdayAuthor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="genderAuthor" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="cityAuthor" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="countryAuthor" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="backgroundAuthor" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="descAuthor" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="752.0" layoutY="45.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addAuthorHandler" text="Thêm" />
+                        <Button mnemonicParsing="false" onAction="#editAuthorHandler" text="OK" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Nhà xuất bản">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="16.0" layoutY="3.0" prefHeight="279.0" prefWidth="682.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="10.0" prefWidth="128.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="667.0" minWidth="10.0" prefWidth="309.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Tên nhà xuất bản:" />
+                        <Label text="Số điện thoại:" GridPane.rowIndex="1" />
+                        <Label text="Địa chỉ:" GridPane.rowIndex="2" />
+                        <Label text="Mô tả:" GridPane.rowIndex="3" />
+                        <TextField fx:id="namePC" GridPane.columnIndex="1" />
+                        <TextField fx:id="phonePC" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="addressPC" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="descPC" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="776.0" layoutY="53.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addPCHandler" text="Thêm" />
+                        <Button mnemonicParsing="false" onAction="#editPCHandler" text="OK" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tablePC" layoutX="39.0" layoutY="296.0" prefHeight="241.0" prefWidth="900.0" />
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Thể loại">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="655.0" prefWidth="992.0">
+               <children>
+                  <TableView fx:id="tableCategory" layoutX="61.0" layoutY="224.0" prefHeight="400.0" prefWidth="905.0" />
+                  <GridPane layoutX="50.0" layoutY="22.0" prefHeight="117.0" prefWidth="596.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="69.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="431.0" minWidth="10.0" prefWidth="431.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Thể loại:" />
+                        <Label text="Mô tả:" GridPane.rowIndex="1" />
+                        <TextField fx:id="nameCategory" GridPane.columnIndex="1" />
+                        <TextField fx:id="descCategory" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane alignment="CENTER" layoutX="686.0" layoutY="21.0" prefHeight="141.0" prefWidth="251.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addCategoryHandler" prefHeight="64.0" prefWidth="461.0" text="Thêm" />
+                        <Button mnemonicParsing="false" onAction="#editCategoryHandler" prefHeight="63.0" prefWidth="486.0" text="OK" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Sách">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="33.0" layoutY="19.0" prefHeight="272.0" prefWidth="700.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Tựa sách:" />
+                        <Label text="Tác giả:" GridPane.rowIndex="1" />
+                        <Label text="Thể loại:" GridPane.rowIndex="2" />
+                        <Label text="NXB:" GridPane.rowIndex="3" />
+                        <Label text="Năm xuất bản:" GridPane.rowIndex="4" />
+                        <Label text="Ngày nhập sách:" GridPane.rowIndex="5" />
+                        <Label text="Vị trí:" GridPane.rowIndex="6" />
+                        <Label text="Mô  tả:" GridPane.rowIndex="7" />
+                        <TextField fx:id="nameBook" GridPane.columnIndex="1" />
+                        <TextField fx:id="yearPublishingBook" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="entryDateBook" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="locationBook" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="descBook" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <ComboBox fx:id="cbbAuthor" onAction="#getIDccbAuthor" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="cbbCategory" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="cbbPC" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tableBook" layoutX="58.0" layoutY="311.0" prefHeight="311.0" prefWidth="911.0" />
+                  <GridPane layoutX="793.0" layoutY="73.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addBookHandler" text="Thêm" />
+                        <Button mnemonicParsing="false" onAction="#editBookHandler" text="OK" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
